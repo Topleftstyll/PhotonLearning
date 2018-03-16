@@ -12,7 +12,9 @@ public class CreateRoom : MonoBehaviour {
 	}
 
 	public void OnClick_CreateRoom() {
-		if(PhotonNetwork.CreateRoom(m_getRoomName.text)) {
+		RoomOptions roomOptions = new RoomOptions() { IsVisible = true, IsOpen = true, MaxPlayers = 4 };
+
+		if(PhotonNetwork.CreateRoom(m_getRoomName.text, roomOptions, TypedLobby.Default)) {
 			print("Create room successfully sent.");
 		} else {
 			print("Create room failed to send.");
