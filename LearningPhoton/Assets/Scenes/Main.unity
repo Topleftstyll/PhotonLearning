@@ -466,6 +466,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_lobbyCanvas: {fileID: 1029048383}
+  m_currentRoomCanvas: {fileID: 1272425762}
 --- !u!1 &146240410
 GameObject:
   m_ObjectHideFlags: 0
@@ -781,7 +782,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 449011016}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1276385917}
+        m_MethodName: OnClickRoomState
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &449011016
@@ -979,10 +991,10 @@ RectTransform:
   m_Father: {fileID: 1272425761}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -420.5, y: 18.450012}
-  m_SizeDelta: {x: 807.5, y: -292.2}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 429.5, y: 18.450012}
+  m_SizeDelta: {x: 807.5, y: 927.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &678702633
 MonoBehaviour:
@@ -1345,7 +1357,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1009241483}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1276385917}
+        m_MethodName: OnClickLeaveRoom
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1009241483
@@ -1462,10 +1485,10 @@ RectTransform:
   m_Father: {fileID: 1029048382}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -420.5, y: 18.450012}
-  m_SizeDelta: {x: 807.5, y: -292.2}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 429.5, y: 18.450012}
+  m_SizeDelta: {x: 807.5, y: 927.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1050700612
 MonoBehaviour:
@@ -1675,6 +1698,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1272425761}
+  - component: {fileID: 1272425762}
   m_Layer: 5
   m_Name: CurrentRoom
   m_TagString: Untagged
@@ -1705,6 +1729,17 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0.00000017881393}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1272425762
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1272425760}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abe7c6570a1406d4080b6e991130beb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1276385913
 GameObject:
   m_ObjectHideFlags: 0
@@ -1715,6 +1750,7 @@ GameObject:
   - component: {fileID: 1276385914}
   - component: {fileID: 1276385916}
   - component: {fileID: 1276385915}
+  - component: {fileID: 1276385917}
   m_Layer: 5
   m_Name: PlayerLayoutGroup
   m_TagString: Untagged
@@ -1775,6 +1811,19 @@ MonoBehaviour:
   m_ChildForceExpandHeight: 0
   m_ChildControlWidth: 0
   m_ChildControlHeight: 0
+--- !u!114 &1276385917
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1276385913}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30e721d83b8c0054597903d7aa509e51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_playerListingPrefab: {fileID: 1644750156971394, guid: 67969425d7432c34ab3262851e0777df,
+    type: 2}
 --- !u!1 &1314768382
 GameObject:
   m_ObjectHideFlags: 0

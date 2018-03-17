@@ -11,6 +11,10 @@ public class LobbyCanvas : MonoBehaviour {
 	}
 
 	public void OnClickJoinRoom(string roomName) {
-		
+		if(PhotonNetwork.JoinRoom(roomName)) {
+			
+		} else {
+			print("Join room failed.");
+		}
 	}
 }
