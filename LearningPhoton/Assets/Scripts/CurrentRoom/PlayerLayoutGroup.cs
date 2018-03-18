@@ -22,6 +22,10 @@ public class PlayerLayoutGroup : MonoBehaviour {
 
 	// called by photon whenever you join a room
 	private void OnJoinedRoom() {
+		foreach(Transform child in transform) {
+			Destroy(child.gameObject);
+		}
+
 		MainCanvasManager.m_instance.m_getCurrentRoomCanvas.transform.SetAsLastSibling();
 
 		PhotonPlayer[] photonPlayers = PhotonNetwork.playerList;

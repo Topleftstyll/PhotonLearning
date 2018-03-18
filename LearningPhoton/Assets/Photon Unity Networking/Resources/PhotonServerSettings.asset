@@ -36,4 +36,6 @@ MonoBehaviour:
   - PunRespawn
   - RequestForPickupItems
   - RequestForPickupTimes
+  - RPCLoadedGameScene
+  - RPCLoadGameOthers
   DisableAutoOpenWizard: 1
