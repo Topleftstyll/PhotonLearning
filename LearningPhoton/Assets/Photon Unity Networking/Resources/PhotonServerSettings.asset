@@ -38,4 +38,5 @@ MonoBehaviour:
   - RequestForPickupTimes
   - RPCLoadedGameScene
   - RPCLoadGameOthers
+  - RPCCreatePlayer
   DisableAutoOpenWizard: 1

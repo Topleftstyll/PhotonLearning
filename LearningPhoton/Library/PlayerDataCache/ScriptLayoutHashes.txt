@@ -186,3 +186,4 @@ d1755adc44fcb9e44c42a5889d35f7a0 Assembly-CSharp.dll:.MoveByKeys
 bba86e9e1cd4155563f842546c95d018 Assembly-CSharp.dll:.CreateRoom
 604f5f55c1cc414f64da1990b36ff015 Assembly-CSharp.dll:.PhotonView
 b2dc25029b6f083ffbbdf9df269f825a Assembly-CSharp.dll:.InRoomChat
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.PlayerMovemnt
